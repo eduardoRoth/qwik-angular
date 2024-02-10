@@ -1,6 +1,6 @@
 {
   "name": "add-angular-to-qwik",
-  "version": "0.1.3",
+  "version": "0.2.0",
   "private": false,
   "description": "Adds Angular to the Qwik repo",
   "repository": {
@@ -29,6 +29,6 @@
   },
   "publishConfig": {
     "access": "public",
-    "provenance": true
+    "provenance": false
   }
 }

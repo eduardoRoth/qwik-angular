@@ -1,6 +1,6 @@
 {
   "name": "@qwikdev/qwik-angular",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "QwikAngular allows adding Angular components into existing Qwik application",
   "repository": {
     "type": "git",
@@ -21,22 +21,22 @@
   "homepage": "https://github.com/QwikDev/qwik-angular",
   "publishConfig": {
     "access": "public",
-    "provenance": true
+    "provenance": false
   },
   "main": "./index.qwik.mjs",
   "qwik": "./index.qwik.mjs",
   "types": "./index.qwik.d.ts",
   "dependencies": {
     "@analogjs/vite-plugin-angular": "~0.2.0",
-    "@angular-devkit/build-angular": "17.0.0",
-    "@angular/animations": "17.0.2",
-    "@angular/common": "17.0.2",
-    "@angular/compiler-cli": "17.0.2",
-    "@angular/compiler": "17.0.2",
-    "@angular/core": "17.0.2",
-    "@angular/platform-browser-dynamic": "17.0.2",
-    "@angular/platform-browser": "17.0.2",
-    "@angular/platform-server": "17.0.2",
+    "@angular-devkit/build-angular": "^17.1.0",
+    "@angular/animations": "^17.1.0",
+    "@angular/common": "^17.1.0",
+    "@angular/compiler-cli": "^17.1.0",
+    "@angular/compiler": "^17.1.0",
+    "@angular/core": "^17.1.0",
+    "@angular/platform-browser-dynamic": "^17.1.0",
+    "@angular/platform-browser": "^17.1.0",
+    "@angular/platform-server": "^17.1.0",
     "@builder.io/qwik": "^1.2.11",
     "rxjs": "~7.8.0",
     "sass": "^1.60.0",

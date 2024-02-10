@@ -138,6 +138,7 @@ function cleanup(isQwikNxInstalled: boolean, uninstallCmd: string) {
   rmSync('.nx', { force: true, recursive: true });
   rmSync('project.json');
   if (!isQwikNxInstalled) {
+    // TODO: remove deps from package.json and simply run npm install
     execSync(`${uninstallCmd} qwik-nx nx`, { stdio: [0, 1, 2] });
   }
 }
