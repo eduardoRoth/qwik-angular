@@ -51,6 +51,7 @@ export const commandsObject: yargs.Argv<Arguments> = yargs
 
 async function main(parsedArgs: yargs.Arguments<Arguments>) {
   let isQwikNxInstalled = false;
+  let isNxDevkitInstalled = false;
   const pm = getRelevantPackageManagerCommand();
 
   output.log({
@@ -78,6 +79,13 @@ async function main(parsedArgs: yargs.Arguments<Arguments>) {
     if (!isQwikNxInstalled) {
       execSync(`${pm.add} qwik-nx@latest nx@latest`, { stdio: [0, 1, 2] });
     }
+
+    isNxDevkitInstalled = checkIfPackageInstalled('@nx/devkit');
+
+    if (!isNxDevkitInstalled) {
+      execSync(`${pm.addDev} @nx/devkit@latest`, { stdio: [0, 1, 2] });
+    }
+
     const installMaterialExample = parsedArgs['installMaterialExample'];
     const installMaterialExampleFlag =
       installMaterialExample === true || installMaterialExample === false
@@ -130,6 +138,7 @@ function getRelevantPackageManagerCommand() {
   return {
     install: pmc.install,
     add: pmc.add,
+    addDev: pmc.addDev,
     uninstall,
   };
 }
